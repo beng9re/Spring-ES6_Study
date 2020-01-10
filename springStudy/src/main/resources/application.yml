@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name : com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/study?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: "!q2w3e4r5t"
+
+debug: true    
+server:
+  port: 5555     
+
+
