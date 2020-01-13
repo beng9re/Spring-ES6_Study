@@ -1,4 +1,23 @@
 spring:
+  profiles: 
+   active: dev
+
+---
+
+spring:
+  profiles: dev
+  jpa:
+    show-sql: true
+ 
+ 
+#debug: true    
+server:
+  port: 8080
+  
+---
+spring: 
+  profiles: ov
+ 
   datasource:
     driver-class-name : com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/study?serverTimezone=UTC&characterEncoding=UTF-8
@@ -7,6 +26,7 @@ spring:
 
 debug: true    
 server:
-  port: 5555     
+  port: 8080
+  
 
-
+    
