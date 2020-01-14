@@ -15,6 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.my.domain.Board;
+import com.my.domain.Code;
+import com.my.domain.User;
 import com.my.repository.BoardRepository;
 
 
@@ -29,9 +31,14 @@ class BoardServiceTest {
 	void saveAndList() {
 		List<Board> boardList = new ArrayList<Board>();
 		
+		Code gender = new Code();
 		
-		boardList.add(Board.builder().title("1st ±Û").content("ÄÁÅÙÃ÷1").regDt(LocalDate.now()).regId("hi").build());
-		boardList.add(Board.builder().title("2st ±Û").content("ÄÁÅÙÃ÷2").regDt(LocalDate.now()).regId("hi").build());
+		User user =  User.builder().birthDay(LocalDate.now()).userId("hi").userName("hi2").gender(gender).build();
+	
+		
+		
+		boardList.add(Board.builder().title("1st ±Û").content("ÄÁÅÙÃ÷1").regDt(LocalDate.now()).regId(user).build());
+		boardList.add(Board.builder().title("2st ±Û").content("ÄÁÅÙÃ÷2").regDt(LocalDate.now()).regId(user).build());
 		
 		boardRepository.saveAll(boardList);
 		

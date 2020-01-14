@@ -9,7 +9,10 @@ public class AI {
 	    }
 	    							      //연산깊이 //부여받은수 //
 	    public void dfs(int n, int pos, int num, int number, String s) {
-	        if (pos > 8) // 깊이가 8이면 break;
+	       System.out.println("CALL :" +  s);
+	     
+	    	
+	    	if (pos > 8) // 깊이가 8이면 break;
 	            return;
 	        
 	        if (num == number) {   //빼거나 더하는경우  브레이크
@@ -32,9 +35,30 @@ public class AI {
 	        }
 	        
 	    }
+	     //5!
+	    public int  factoryStart(int su) {
+	    	
+	    	int result =1;
+	    	for(int i=1; i<su;i++) {
+	    		result=result*(num(i));
+	    	}
+	    	
+	    	return result;
+	    	
+	    }
+	    
+	    public int num (int n) {
+	    	if(n==1) {
+	    		return 1;
+	    	}else {
+	    		return n * num(n-1);
+	    	}
+	    }
+	    
 	    public static void main(String[] args) {
 			AI a =new AI();
-			System.out.println(a.solution(5, 12));
+			//System.out.println(a.solution(5, 12));
+			System.out.println(a.num(4));
 			
 		}
 	
