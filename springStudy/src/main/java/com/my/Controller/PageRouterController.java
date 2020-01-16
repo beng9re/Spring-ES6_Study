@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PageRouterController {
 	
 	
-	@RequestMapping("{packageName}/{routePage}")
+	@RequestMapping("main/{packageName}/{routePage}")
 	public String mainRouter(@PathVariable Map<String, String> pathMap) {
 		
 		pathMap.forEach((key,value)-> {System.out.printf("key:: %s value:: %s\n", key,value);});
