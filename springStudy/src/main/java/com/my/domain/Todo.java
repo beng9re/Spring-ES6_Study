@@ -21,11 +21,13 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Builder
 @Entity
 @Table(name="T_TODO")
@@ -50,6 +52,8 @@ public class Todo {
 	@OneToOne
 	@JoinColumn(name="regId")
 	private User regId;
+	
+	
 	
 	
 

@@ -7,15 +7,15 @@ public class AI {
 	        dfs(N, 0, 0, number, "");
 	        return answer;
 	    }
-	    							      //연산깊이 //부여받은수 //
+	    					
 	    public void dfs(int n, int pos, int num, int number, String s) {
 	       System.out.println("CALL :" +  s);
 	     
 	    	
-	    	if (pos > 8) // 깊이가 8이면 break;
+	    	if (pos > 8)
 	            return;
 	        
-	        if (num == number) {   //빼거나 더하는경우  브레이크
+	        if (num == number) {  
 	        	
 	            if (pos < answer || answer == -1) {
 	                System.out.println(s);

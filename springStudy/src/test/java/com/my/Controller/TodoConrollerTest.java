@@ -43,7 +43,8 @@ class TodoConrollerTest {
 		mvc.perform(get("/todo/list"))
 											.andDo(print())
 											.andExpect(status().isOk())
-											.andExpect(jsonPath("$" , Matchers.iterableWithSize(2)));
+											.andExpect(jsonPath("$" , Matchers.iterableWithSize(2)))
+											.andExpect(jsonPath("$[0].id").value(1));
 											
 	}
 
